@@ -35,21 +35,21 @@ Raw Layer:(Schema = raw)
 
 ----------
 
-customers	
+raw_customers	
 
 
-|-> geolocation
+|-> raw_geolocation
 
-orders
+raw_orders
 
-|-> order_items	order_payments	order_reviews
+|-> raw_order_items	raw_order_payments	raw_order_reviews
 
 
-products
+raw_products
 
-|->	product_category_name_translation
+|->	raw_product_category_name_translation
 
-sellers
+raw_sellers
 
 Stagging Layer:(Schema = stg)
 
