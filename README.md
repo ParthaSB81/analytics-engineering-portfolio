@@ -15,7 +15,7 @@ The purpose of this project is to showcase different phases of Analytics enginee
 ++++++++++++++++++++++++++++++++++++++
 ++++ Dataset
 ++++++++++++++++++++++++++++++++++++++
- Brazillian Ecommerce Dataset - Olist
+Brazillian Ecommerce Dataset - Olist
  
  
 ++++++++++++++++++++++++++++++++++++++
