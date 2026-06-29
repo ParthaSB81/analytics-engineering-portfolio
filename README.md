@@ -37,58 +37,76 @@ Raw Layer:(Schema = raw)
 
 customers	
 
-|
 
 |-> geolocation
 
-
 orders
-
-|
 
 |-> order_items	order_payments	order_reviews
 
 
 products
-|
+
 |->	product_category_name_translation
 
 sellers
 
 Stagging Layer:(Schema = stg)
+
 ----------------
+
 stg_customers	
-|
+
+
 |-> stg_geolocation
 
+
 stg_orders
-|
+
+
 |-> stg_order_items	stg_order_payments	stg_order_reviews
 
+
 stg_products
-|
+
+
 |->	stg_product_category_name_translation
 
 stg_sellers
 
 Mart Layer:(Schema = analytics)
+
 ------------
+
 Dimension Layer
+
 ================
+
 dim_customers
+
 dim_date
+
 dim_seller
 
+
 Fact Layer
+
 ===========
+
 fact_orders
+
 fact_order_items
+
 fact_payments
 
 
+
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Tech Stack
+
 ++++++++++++++++++++++++++++++++++++++
+
 	- sql
 	- python
 	- dbt(ETl/ELT)
