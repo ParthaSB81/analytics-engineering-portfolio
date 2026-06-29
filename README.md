@@ -1,9 +1,11 @@
 ++++++++++++++++++++++++++++++++++++++
 ++++ Project Overview
 ++++++++++++++++++++++++++++++++++++++
+
 This is a Ecommerce Analytics Engineering Project, showcased as Protfolio.
 The source dataset used is Bazillian Ecommerce dataset.
 The purpose of this project is to showcase different phases of Analytics engineering, e.g
+
 	- Source Data extraction
 	- Data clean-up & starderdization
 	- Schema design
@@ -15,6 +17,7 @@ The purpose of this project is to showcase different phases of Analytics enginee
 ++++++++++++++++++++++++++++++++++++++
 ++++ Dataset
 ++++++++++++++++++++++++++++++++++++++
+
 Brazillian Ecommerce Dataset - Olist
  
  
