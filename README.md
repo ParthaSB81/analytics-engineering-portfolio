@@ -115,25 +115,42 @@ fact_payments
 	- git
 	
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Project Goals
+
 ++++++++++++++++++++++++++++++++++++++	
+
 To build and showcase an end to end analytics engineering project portfolio.
 This project shall be using each starderdize process/techniques and layers of analytics.
 Also the work shall use real production data avalibale and will follow steps or best practices used in real production environment.
 
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Folder Structure
+
 ++++++++++++++++++++++++++++++++++++++	
 
+
 architecture/
+
 	- Architecture level design. and diagrams.
+	
 dashboards/
+
 	- End user dashboard snapshots
+	
 data/
+
 	- raw data(e.g csv files)
+	
 docs/
+
 	- project documentation
+	
 sql/
+
 	- sql scripts
+	
 tests/
+
 	- test scripts
