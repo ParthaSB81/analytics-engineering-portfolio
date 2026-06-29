@@ -1,5 +1,7 @@
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Project Overview
+
 ++++++++++++++++++++++++++++++++++++++
 
 This is a Ecommerce Analytics Engineering Project, showcased as Protfolio.
@@ -15,25 +17,37 @@ The purpose of this project is to showcase different phases of Analytics enginee
 	- Data Storytelling
 	
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Dataset
+
 ++++++++++++++++++++++++++++++++++++++
 
 Brazillian Ecommerce Dataset - Olist
  
  
 ++++++++++++++++++++++++++++++++++++++
+
 ++++ Architecture
+
 ++++++++++++++++++++++++++++++++++++++
 
 Raw Layer:(Schema = raw)
+
 ----------
+
 customers	
+
 |
+
 |-> geolocation
 
+
 orders
+
 |
+
 |-> order_items	order_payments	order_reviews
+
 
 products
 |
