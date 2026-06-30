@@ -6,7 +6,7 @@
 
 1.	Document Information
 
-Item			Value
+Item            Value
 --------------------------
 Project			E-Commerce Analytics
 
