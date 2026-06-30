@@ -16,3 +16,14 @@ Version			1.0
 
 Date			30/06/2026
 
+Item		Value
+--------------------------------
+
+Project		E-Commerce Analytics
+		
+Author		Partha Basak
+		
+Version		1
+		
+Date		30-06-2026
+
