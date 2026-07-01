@@ -226,7 +226,8 @@ Data Quality Rules
 
 Assumptions
 ------------
-One customer can have many orders.
+
+	- One customer can have many orders.
 One seller can sell many products.
 One order can contain multiple products.
 Payment records are complete and accurately linked to orders.
