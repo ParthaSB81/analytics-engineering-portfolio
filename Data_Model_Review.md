@@ -55,3 +55,17 @@ Grain  :: One row per order
 	
 Table :: Fact orders items
 Grain  :: One row per product within an order	
+
+Table :: Fact payments
+Grain  :: One row per payment transaction
+
+Table :: Dimension Customers
+Grain  :: One row per customer
+
+Table :: Dimension Product
+Grain  :: One row per product
+
+Table :: Dimension Seller
+Grain  :: One row per seller
+
+
