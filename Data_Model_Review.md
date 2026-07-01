@@ -86,33 +86,26 @@ Fact orders
 Purpose: Stores order level business metrics
 
 Columns
-| Column 1 | Column 2 |
-|----------|----------|
-| SQL      | Python   |
-| dbt      | Airflow  |
-| Snowflake| Azure    |
+| Column          |    Description    |
+|-----------------|-------------------|
+| order_id        | Business Key      |
+| customer_key    | FK                |
+| date_key        | FK                |
+| date_key        | FK                |
+| delivery_days   | calculated        |
+| delay_days      | calculated        |        
+| total_order_valu| measured          |
+| total_frieght   | measured          |
+| total_payment   | measured          |
 
-
-
-Column			Description
-
-order_id		Business Key
-customer_key	FK
-
-date_key[FK]
-order_status::status
-delivery_days::calculated
-delay_days::calculated
-total_order_value::measured
-total_frieght::measured
-total_payment::measured
 
 Measures: 
-Total revenue
-Average delivery days
-Completed delivery percentage
-Average delay days
-Frieght
+|---------------------------------|
+| Total revenue                   |
+| Average delivery days           |
+| Completed delivery percentage   |
+| Average delay days              |  
+| Frieght                         |
 
 
 Fact Order items
@@ -120,17 +113,19 @@ Fact Order items
 
 Purpose: Supports product  and seller analysis
 
-Measures:
-Product Price
-Frieght Value
+Measures: 
+|---------------------------------|
+| Product Price                   |
+| Frieght Value                   |
 
 Fact Payments
 --------------
 
 Purpose: Supports payment analysis
 
-Measures
-Payment Value
+Measures: 
+|----------------|
+| Payment Value  |
 
 
 
