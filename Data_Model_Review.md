@@ -232,3 +232,12 @@ Assumptions
 	- One order can contain multiple products.
 	- Payment records are complete and accurately linked to orders.
 	- Delivery dates are trusted when present.
+
+Future Enhancements
+--------------------
+	- Implement SCD Type 2 for customer and seller dimensions.
+	- Add inventory and shipment fact tables.
+	- Introduce dbt tests for automated data quality validation.
+	- Orchestrate ETL pipelines with Airflow.
+	- Migrate to a cloud data warehouse such as Snowflake or BigQuery.
+	- Build CI/CD pipelines for analytics assets.	
