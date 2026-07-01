@@ -87,17 +87,19 @@ Purpose: Stores order level business metrics
 
 Columns
 
-Column            Description
+Column::Description
 
-order_id          Business Key
-customer_key      FK
-date_key          FK
-order_status      status
-delivery_days     calculated
-delay_days        calculated
-total_order_value measured
-total_frieght     measured
-total_payment     measured
+order_id::Business Key
+
+customer_key::FK
+
+date_key::FK
+order_status::status
+delivery_days::calculated
+delay_days::calculated
+total_order_value::measured
+total_frieght::measured
+total_payment::measured
 
 Measures: 
 Total revenue
