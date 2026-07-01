@@ -129,3 +129,14 @@ Measures:
 
 
 
+Dimension Review
+-----------------
+Purpose : Stores customer descriptive attributes
+
+Columns
+	- customer_key
+	- customer_id
+	- customer_unique_id
+	- customer_city
+	- customer_state
+
