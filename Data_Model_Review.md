@@ -75,3 +75,54 @@ Star Schema
 ER Diagram
 
 ![Architecture Diagram](./architecture/er_diagram.png)
+
+
+Fact Tables
+============
+
+Fact orders
+-----------
+
+Purpose: Stores order level business metrics
+
+Columns
+
+Column            Description
+
+order_id          Business Key
+customer_key      FK
+date_key          FK
+order_status      status
+delivery_days     calculated
+delay_days        calculated
+total_order_value measured
+total_frieght     measured
+total_payment     measured
+
+Measures: 
+Total revenue
+Average delivery days
+Completed delivery percentage
+Average delay days
+Frieght
+
+
+Fact Order items
+-----------------
+
+Purpose: Supports product  and seller analysis
+
+Measures:
+Product Price
+Frieght Value
+
+Fact Payments
+--------------
+
+Purpose: Supports payment analysis
+
+Measures
+Payment Value
+
+
+
