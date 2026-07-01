@@ -86,6 +86,13 @@ Fact orders
 Purpose: Stores order level business metrics
 
 Columns
+| Column 1 | Column 2 |
+|----------|----------|
+| SQL      | Python   |
+| dbt      | Airflow  |
+| Snowflake| Azure    |
+
+
 
 Column			Description
 
