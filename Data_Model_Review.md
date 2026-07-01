@@ -51,9 +51,7 @@ Grain Definition
 =====================
 
 Table :: Fact orders
-
 Grain  :: One row per order
 	
 Table :: Fact orders items
-
 Grain  :: One row per product within an order	
