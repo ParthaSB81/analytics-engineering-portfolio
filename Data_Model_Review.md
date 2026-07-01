@@ -214,7 +214,6 @@ Data Quality Rules
 |Rule|Action|
 |----------------|---------|
 |Duplicate Customer	|Remove|
-
 |Missing Product Category	|Flag|
 |Negative Payment	|Reject|
 |Delivered Order without Delivery Date	|Flag|
