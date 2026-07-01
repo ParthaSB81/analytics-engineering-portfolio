@@ -201,7 +201,7 @@ SCD Strategy
 -------------
 
 |Dimension|Type|Reason|
-|-----------------|-------------------|
+|-----------------|-----------|--------|
 |Customer|Type 1|Portfolio project; only latest location required.|
 |Seller	|Type 1	|Latest seller information is sufficient.|
 |Product	|Type 1	|Product metadata corrections overwrite previous values.|
@@ -212,9 +212,9 @@ Data Quality Rules
 -------------------
 
 |Rule|Action|
--------------
-|Duplicate Customer	|Remove|
 |----------------|---------|
+|Duplicate Customer	|Remove|
+
 |Missing Product Category	|Flag|
 |Negative Payment	|Reject|
 |Delivered Order without Delivery Date	|Flag|
