@@ -182,7 +182,7 @@ Relationships
 
 Measures
 ---------
-All posiible Metrics
+All possible Metrics
 
 
 | Measure            |    Formula      |
@@ -193,5 +193,7 @@ All posiible Metrics
 |Delay Days|Delivered Date - Estimated Date|
 |Repeat Customer Rate|Repeat Customers / Total Customers|
 |Seller Contribution %|Seller Revenue / Total Revenue|
+|Order Completion Rate|Delivered Orders / Total Orders|
+|Product  Contribution %|product Revenue / Total Revenue|
 
 
