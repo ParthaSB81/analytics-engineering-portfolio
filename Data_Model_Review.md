@@ -74,4 +74,4 @@ Star Schema
 
 ER Diagram
 
-https://github.com/ParthaSB81/analytics-engineering-portfolio/blob/main/architecture/er_diagram.png
+![Architecture Diagram](./architecture/er_diagram.png)
