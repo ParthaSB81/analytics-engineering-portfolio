@@ -200,7 +200,7 @@ All possible Metrics
 SCD Strategy
 -------------
 
-Dimension|Type|Reason|
+|Dimension|Type|Reason|
 |-----------------|-------------------|
 |Customer|Type 1|Portfolio project; only latest location required.|
 |Seller	|Type 1	|Latest seller information is sufficient.|
@@ -214,6 +214,7 @@ Data Quality Rules
 |Rule|Action|
 -------------
 |Duplicate Customer	|Remove|
+|----------------|---------|
 |Missing Product Category	|Flag|
 |Negative Payment	|Reject|
 |Delivered Order without Delivery Date	|Flag|
