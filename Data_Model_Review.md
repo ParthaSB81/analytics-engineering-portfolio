@@ -90,7 +90,6 @@ Columns
 Column::Description
 
 order_id::Business Key
-
 customer_key::FK
 
 date_key::FK
