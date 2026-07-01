@@ -87,13 +87,12 @@ Purpose: Stores order level business metrics
 
 Columns
 
-Column::Description
+Column			Description
 
-order_id::Business Key
+order_id		Business Key
+customer_key	FK
 
-customer_key::FK
-
-date_key::FK
+date_key[FK]
 order_status::status
 delivery_days::calculated
 delay_days::calculated
