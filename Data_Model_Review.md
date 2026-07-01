@@ -131,12 +131,52 @@ Measures:
 
 Dimension Review
 -----------------
+Customer Dimension
+
 Purpose : Stores customer descriptive attributes
 
 Columns
-	- customer_key
-	- customer_id
+	- customer_key(Primary Key)
+	- customer_id(Business Key)
 	- customer_unique_id
 	- customer_city
 	- customer_state
+
+SCD : Type 1
+
+Product Dimension
+------------------
+
+Purpose : Stores product metadata
+
+Attributes : 	Category, Width, Lenght, Height, Weight
+
+SCD : Type 1
+
+Seller Dimension
+-----------------
+
+Purpose : Seller information
+
+Date Dimension
+---------------
+
+Purpose : Supports time related details
+
+Attributes : 	year, quarter, month, week, day, day_name
+
+
+Relationships
+-------------
+
+| Fact            |    Dimension      |    Relationship   |
+|-----------------|-------------------|-------------------|
+| Fact Orders     |      Customer     |   Many to one     |
+| Fact Orders     |       Date        |   Many to one     |
+|Fact Orders Items|       Product     |   Many to one     |
+|Fact Orders Items|       Seller      |   Many to one     |
+|Fact Orders Items|       Date        |   Many to one     |
+| Fact Payment    |       Date        |   Many to one     |        
+| Fact Payment    |       Customer    |   Many to one     |        
+
 
