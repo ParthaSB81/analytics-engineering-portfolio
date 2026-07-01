@@ -27,3 +27,33 @@ The business requires a centralized analytics data warehouse to analyze revenue,
 Source Systems
 =================
 
+File format :: csv
+Source of:: customers, orders, product, sellers, paayments, reviews, order items
+
+
+Business Requirements
+======================
+
+The business should be able to answer
+
+	- Monthly revenue
+	- Revenue by product category
+	- Revenuue by sellers
+	- Top customers
+	- Delivery delays
+	- Repeat customers
+	- Average purchase rate
+	- Average order Value
+	- Customer geography
+	- Product category performance
+	
+Grain Definition
+=====================
+
+Table :: Fact orders
+
+Grain  :: One row per order
+	
+Table :: Fact orders items
+
+Grain  :: One row per product within an order	
