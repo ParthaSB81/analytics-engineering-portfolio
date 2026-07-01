@@ -180,3 +180,18 @@ Relationships
 | Fact Payment    |       Customer    |   Many to one     |        
 
 
+Measures
+---------
+All posiible Metrics
+
+
+| Measure            |    Formula      |
+|-----------------|-------------------|
+|Revenue| sum(price)|
+|Average Order Value| Revenue/Total Orders|
+|Delivery Days|Delivered Date - Purchase Date|
+|Delay Days|Delivered Date - Estimated Date|
+|Repeat Customer Rate|Repeat Customers / Total Customers|
+|Seller Contribution %|Seller Revenue / Total Revenue|
+
+
