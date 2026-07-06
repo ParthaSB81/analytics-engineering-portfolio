@@ -41,3 +41,17 @@ Technology Stack
 | Sellers   | Seller information |
 | Payments  | Payment records    |
 | Reviews   | Customer reviews   |
+
+
+## Raw Layer
+- Store original data exactly as received.
+- No cleaning.
+
+Raw Tables:
+- raw.raw_orders
+- raw.raw_customers
+- raw.raw_products
+- raw.raw_order_payments
+- raw.raw_order_items
+- raw.raw_order_reveiws
+- raw.raw_geolocation
