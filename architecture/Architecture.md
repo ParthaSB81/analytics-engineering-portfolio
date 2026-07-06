@@ -9,6 +9,7 @@ The objective is to transform raw CSV files into a dimensional data warehouse th
 Technology Stack
 
 - SQL Server
+- SQL
 - Python (Pandas)
 - Power BI
 - GitHub
