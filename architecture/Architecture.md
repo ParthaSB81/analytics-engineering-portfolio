@@ -13,3 +13,31 @@ Technology Stack
 - Python (Pandas)
 - Power BI
 - GitHub
+
+## Architecture Diagram
+
+![Architecture Diagram](./arcitechture_diagram.png)
+
+## Technology Stack
+
+| Layer           | Technology   |
+| --------------- | ------------ |
+| Source          | CSV          |
+| Database        | SQL Server   |
+| Cleaning        | Python + SQL |
+| Data Warehouse  | Star Schema  |
+| Reporting       | Power BI     |
+| Version Control | Git          |
+| Documentation   | Markdown     |
+
+
+## Source Layer
+
+| Dataset   | Description        |
+| --------- | ------------------ |
+| Customers | Customer master    |
+| Orders    | Order transactions |
+| Products  | Product metadata   |
+| Sellers   | Seller information |
+| Payments  | Payment records    |
+| Reviews   | Customer reviews   |
