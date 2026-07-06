@@ -74,7 +74,7 @@ Star Schema
 
 ER Diagram
 
-![Architecture Diagram](./architecture/er_diagram.png)
+![Architecture Diagram](./er_diagram.png)
 
 
 Fact Tables
