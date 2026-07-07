@@ -1,14 +1,3 @@
---use ecommerce
-
-select * from analytics.dim_customer
-select * from analytics.fact_orders
---select * from analytics.fact_order_items
---select * from analytics.dim_product
---select * from analytics.fact_payments
-select * from analytics.dim_date
---select * from analytics.dim_seller
-
-
 --## Top 5 sellers by revenue.
 with t5_revenue as (
 	select 
