@@ -2,4 +2,4 @@
 
 ## Data Flow Diagram
 
-![Architecture Diagram](./diagrams/data_flow_diagram.png)
+![Architecture Diagram](./data_flow_diagram.png)
