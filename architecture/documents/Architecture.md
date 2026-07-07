@@ -16,7 +16,7 @@ Technology Stack
 
 ## Architecture Diagram
 
-![Architecture Diagram](./diagrams/arcitechture_diagram.png)
+![Architecture Diagram](./arcitechture_diagram.png)
 
 ## Technology Stack
 
@@ -74,6 +74,6 @@ Performed:
 
 # Star Schema
 
-![Architecture Diagram](./diagrams/star_schema.png)
+![Architecture Diagram](./star_schema.png)
 
 

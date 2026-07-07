@@ -2,4 +2,4 @@
 
 ## ELT Flow Diagram
 
-![Architecture Diagram](./diagrams/etl_workflow_diagram.png)
+![Architecture Diagram](./etl_workflow_diagram.png)
