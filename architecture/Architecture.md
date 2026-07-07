@@ -55,3 +55,25 @@ Raw Tables:
 - raw.raw_order_items
 - raw.raw_order_reveiws
 - raw.raw_geolocation
+
+## Staging Layer
+
+- Clean data.
+
+Performed:
+- Remove duplicates
+- Handle missing values
+- Create flags
+- Calculated
+   - delivery_days
+   - delay days
+   - approval_hours
+   - estimated delivery days
+
+## Analytics Layer
+
+# Star Schema
+
+![Architecture Diagram](./star_schema.png)
+
+
