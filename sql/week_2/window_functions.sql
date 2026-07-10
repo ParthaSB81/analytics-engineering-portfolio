@@ -12,20 +12,42 @@ row_number() over(order by Revenue desc) as Row_num
 from t5_revenue;
 
 -- ## Top 3 products per category by revenue.
-with product_cat_by_rev as (
-	select
-		dp.product_key,
-		dp.product_category_name as product_category,
-		sum(foi.price) as Revenue
-	from analytics.fact_order_items foi
-	join analytics.dim_product dp
-	on foi.product_key = dp.product_key
-		group by dp.product_key, dp.product_category_name
+WITH product_cat_by_rev AS
+(
+    SELECT
+        dp.product_key,
+        dp.product_category_name AS product_category,
+        SUM(foi.price) AS revenue
+    FROM analytics.fact_order_items foi
+    JOIN analytics.dim_product dp
+        ON foi.product_key = dp.product_key
+    GROUP BY
+        dp.product_key,
+        dp.product_category_name
+),
+ranked_products AS
+(
+    SELECT
+        product_key,
+        product_category,
+        revenue,
+        ROW_NUMBER() OVER
+        (
+            PARTITION BY product_category
+            ORDER BY revenue DESC, product_key
+        ) AS row_num
+    FROM product_cat_by_rev
 )
-select top 3
-*,
-row_number() over(order by Revenue desc) as row_num
-from product_cat_by_rev;
+SELECT
+    product_key,
+    product_category,
+    revenue,
+    row_num
+FROM ranked_products
+WHERE row_num <= 3
+ORDER BY
+    product_category,
+    row_num;
 
 -- ## Monthly revenue with previous month revenue.
 select
@@ -43,7 +65,7 @@ group by
 	dd.month_name
 order by 
 	dd.year desc,
-	dd.month_number;
+	dd.month_number desc;
 
 
 -- ## Monthly revenue growth percentage.
