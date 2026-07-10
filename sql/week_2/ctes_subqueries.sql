@@ -1,3 +1,4 @@
+--use ecommerce
 -- ## Find repeat customers.
 with repeat_customers as (
 	select
@@ -98,3 +99,39 @@ from seller_cum_perc
 where cummu_perc <=80
     order by seller_revenue desc
 
+-- ## Find products with above-average category revenue.
+
+with product_rev as (
+    select 
+        dp.product_key,
+        dp.product_category_name as cat_name,
+        sum(foi.price) as product_revenue
+    from analytics.fact_order_items foi
+    join analytics.dim_product dp
+    on foi.product_key = dp.product_key
+    group by dp.product_key,dp.product_category_name
+),
+per_cat_rev as (
+    SELECT
+        product_key,
+        cat_name,
+        product_revenue,
+        CAST(
+            AVG(product_revenue) OVER (
+                PARTITION BY cat_name
+            )
+            AS DECIMAL(10,2)
+        ) AS avg_product_revenue_per_category
+    FROM product_rev
+)
+select
+    product_key,
+    cat_name,
+    product_revenue,
+    avg_product_revenue_per_category
+FROM per_cat_rev
+WHERE product_revenue > avg_product_revenue_per_category
+ORDER BY
+    cat_name,
+    product_revenue ;
+    
