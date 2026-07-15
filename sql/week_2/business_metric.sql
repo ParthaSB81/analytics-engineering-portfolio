@@ -1,21 +1,22 @@
 -- ## Total revenue.
-select
-	sum(price) as Total_Revenue
-from analytics.fact_order_items;
+SELECT
+    SUM(total_order_value) AS total_revenue
+FROM analytics.fact_orders
+WHERE order_status = 'delivered';
 
 -- ## Total orders.
 select
 	count(distinct order_id) as Total_Orders
-from analytics.fact_orders;
+from analytics.fact_orders
+WHERE order_status = 'delivered';
 
 -- ## Average order value.
-select
-	sum(foi.price) as Total_Revenue,
-	count(distinct fo.order_id) as Total_Orders,
-	cast(sum(foi.price)/count(distinct fo.order_id) as decimal(10,2)) as Avg_order_value
-from analytics.fact_order_items foi
-join analytics.fact_orders fo
-on foi.customer_key = fo.customer_key;
+SELECT
+    SUM(total_order_value) AS Total_revenue,
+    count(distinct order_id) as Total_Orders,
+    cast(SUM(total_order_value)/count(distinct order_id) as decimal(10,2)) as Avg_order_value
+from analytics.fact_orders
+where order_status = 'delivered';
 
 -- ## Total customers.
 select
@@ -31,6 +32,7 @@ WITH customer_orders AS (
     FROM analytics.fact_orders fo
     JOIN analytics.dim_customer dc
         ON fo.customer_key = dc.customer_key
+    where fo.order_status = 'delivered'
     GROUP BY dc.customer_unique_id
 )
 SELECT
@@ -94,11 +96,29 @@ select
 from seller_rev
 order by seller_Revenue desc
 
+-- ## Payment method contribution.
+with total_payment_by_type as (
+    select
+        payment_type,
+        sum(payment_value) as payment_by_type
+    from 
+    analytics.fact_payments
+    where payment_type != 'not_defined'
+    group by payment_type
+)
+select
+    payment_type as Payment_Method,
+    payment_by_type,
+    cast(payment_by_type * 100.0 /NULLIF(sum(payment_by_type) over(),0) as decimal(10,2)) as 'Contribution%'
+from total_payment_by_type
+order by payment_by_type desc;
 
--- ## Monthly active customers.
 
-select * from analytics.fact_order_items
-select * from analytics.fact_payments
-select * from analytics.dim_date
-
-select DAY(date_key) from analytics.fact_order_items
+-- ## Cancellation rate
+SELECT
+    CAST(
+        COUNT(CASE WHEN order_status = 'canceled' THEN 1 END) * 100.0
+        / COUNT(*)
+        AS DECIMAL(10,2)
+    ) AS cancellation_rate
+FROM analytics.fact_orders;
