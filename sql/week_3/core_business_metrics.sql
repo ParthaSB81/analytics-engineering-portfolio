@@ -10,7 +10,7 @@ select
 from analytics.fact_orders
 where order_status = 'delivered';
 
--- AVerage Order Value
+-- Average Order Value
 select
 	cast(sum(total_order_value) / nullif(count(distinct order_id),0) as decimal(10,2)) as Average_Order_Value
 from analytics.fact_orders;
